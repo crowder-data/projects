@@ -55,6 +55,7 @@ def heatmap_raw(data):
     annot=True, 
     fmt='g',
     ax = ax,
+    cmap="Blues"
     annot_kws = {"fontsize":14}
   )
 
@@ -85,6 +86,7 @@ def heatmap_pct(data):
       annot=True,
       fmt=".1%",
       ax = ax,
+      cmap = "Blues"
       annot_kws = {"fontsize":14}
   )
 
