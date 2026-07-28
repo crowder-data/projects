@@ -72,6 +72,7 @@ def heatmap_raw(data):
       rotation=0
   )
 
+  ax.collections[0].colorbar.ax.set_label("Runner Count",labelsize=14)
   ax.collections[0].colorbar.ax.tick_params(labelsize=14)
 
   ax.set_xlabel("Year", fontsize=16)
@@ -90,8 +91,7 @@ def heatmap_pct(data):
       fmt=".1%",
       ax = ax,
       cmap = "Blues",
-      annot_kws = {"fontsize":14},
-      cbar_kws={"label": "Percent of Runners"}
+      annot_kws = {"fontsize":14}
   )
 
   
@@ -107,6 +107,7 @@ def heatmap_pct(data):
       rotation=0
   )
 
+  ax.collections[0].colorbar.ax.set_label("Percent of Runners",labelsize=14)
   ax.collections[0].colorbar.ax.tick_params(labelsize=14)
   
   ax.set_xlabel("Year", fontsize=16)
