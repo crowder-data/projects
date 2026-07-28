@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 from goosebumps import (
     load_data,
