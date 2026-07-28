@@ -32,17 +32,20 @@ def yearly_histogram(df, year, bins):
 
   return fig
 
+def create_heatmap_data(df_long):
+  heatmap_data = (
+      df_long.groupby(['Year','Range'],observed=False)
+      .size()
+      .unstack(fill_value=0)
+  )
+  return heatmap_data
 
-heatmap_data = (
-    df_long.groupby(['Year','Range'],observed=False)
-    .size()
-    .unstack(fill_value=0)
-)
-
-heatmap_data_percents = heatmap_data.apply(
-    lambda row: row / row.sum(),
-    axis=1
-)
+def create_heatmap_data_percents(df_long):
+  heatmap_data_percents = heatmap_data.apply(
+      lambda row: row / row.sum(),
+      axis=1
+  )
+  return heatmap_data_percents
 
 def heatmap_raw(data = heatmap_data):
   fig, ax = plt.subplots(figsize = (8,4))
