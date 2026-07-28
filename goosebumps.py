@@ -47,7 +47,7 @@ def create_heatmap_data_percents(df_long):
   )
   return heatmap_data_percents
 
-def heatmap_raw(data = heatmap_data):
+def heatmap_raw(data):
   fig, ax = plt.subplots(figsize = (8,4))
     
   sns.heatmap(
@@ -61,7 +61,7 @@ def heatmap_raw(data = heatmap_data):
 
   return fig
 
-def heatmap_pct(data = heatmap_data_percents):
+def heatmap_pct(data):
   fig, ax = plt.subplots(figsize = (8,4))
   
   sns.heatmap(
