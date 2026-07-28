@@ -24,7 +24,7 @@ view = st.radio(
 
 
 if view == "Yearly Histograms":
-    years = sorted(df_long["Year"].unique())
+    years = sorted(df_long["Year"].unique()).astype('int')
     
     year = st.slider(
         "Year",
