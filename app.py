@@ -24,9 +24,13 @@ view = st.radio(
 
 
 if view == "Yearly Histograms":
-    year = st.selectbox(
+    years = sorted(df_long["Year"].unique())
+    
+    year = st.slider(
         "Year",
-        sorted(df_long["Year"].unique())
+        min_value=min(years),
+        max_value=max(years),
+        value=max(years)
     )
 
     st.pyplot(yearly_histogram(df_long, year))
