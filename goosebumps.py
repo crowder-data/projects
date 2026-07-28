@@ -13,7 +13,7 @@ def load_data(filename):
   df_long['Range'] = pd.cut(df_long['Miles'],bins=bins,labels=labels)
   return df_long
 
-def yearly_histogram(df, year, bins):
+def yearly_histogram(df, year):
   data = df.loc[df['Year']==year, "Miles"]
 
   fig, ax = plt.subplots(figsize = (8,4))
