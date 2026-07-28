@@ -29,11 +29,12 @@ if view == "Yearly Histograms":
     df_long["Year"] = pd.to_numeric(df_long["Year"])
 
     years = sorted(df_long["Year"].unique())
-    
-    year = st.slider(
+
+    years = [y for y in years if y != 2020]
+
+    year = st.select_slider(
         "Year",
-        min_value=min(years),
-        max_value=max(years),
+        options=years,
         value=max(years)
     )
 
