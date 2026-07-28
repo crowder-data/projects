@@ -54,7 +54,8 @@ def heatmap_raw(data):
     data,
     annot=True, 
     fmt='g',
-    ax = ax
+    ax = ax,
+    annot_kws = {"fontsize":14}
   )
 
   ax.tick_params(
