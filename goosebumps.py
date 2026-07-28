@@ -69,7 +69,7 @@ def heatmap_pct(data):
       annot=True,
       fmt=".1%",
       ax = ax,
-      annot_kws = {"fontsize":10}
+      annot_kws = {"fontsize":14}
   )
 
   fig.tight_layout()
