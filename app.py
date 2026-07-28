@@ -15,6 +15,7 @@ df_long = load_data('data/Goosebumps.csv')
 heatmap_data = create_heatmap_data(df_long)
 heatmap_data_pct = create_heatmap_data_percents(heatmap_data)
 
+st.title("Goosebumps Mileage Analysis")
 
 view = st.radio(
     "View",
