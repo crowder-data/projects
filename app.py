@@ -32,8 +32,8 @@ if view == "Yearly Histograms":
 
 
 elif view == "Raw Heatmap":
-    st.pyplot(heatmap_raw(heatmap_data.T))
+    st.pyplot(heatmap_raw(heatmap_data.T.iloc[::-1]))
 
 
 elif view == "Percent Heatmap":
-    st.pyplot(heatmap_pct(heatmap_data_pct.T))
+    st.pyplot(heatmap_pct(heatmap_data_pct.T.iloc[::-1]))
