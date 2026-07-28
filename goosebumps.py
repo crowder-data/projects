@@ -71,6 +71,8 @@ def heatmap_raw(data):
       rotation=0
   )
 
+  ax.collections[0].colorbar.ax.tick_params(labelsize=14)
+
   ax.set_xlabel("Year", fontsize=16)
   ax.set_ylabel("Mileage Range", fontsize=16)
 
@@ -102,6 +104,8 @@ def heatmap_pct(data):
       labelsize=14,
       rotation=0
   )
+
+  ax.collections[0].colorbar.ax.tick_params(labelsize=14)
   
   ax.set_xlabel("Year", fontsize=16)
   ax.set_ylabel("Mileage Range", fontsize=16)
