@@ -57,6 +57,11 @@ def heatmap_raw(data):
     ax = ax
   )
 
+  ax.tick_params(
+    axis="both",
+    labelsize=14
+  )
+
   fig.tight_layout()
 
   return fig
@@ -70,6 +75,12 @@ def heatmap_pct(data):
       fmt=".1%",
       ax = ax,
       annot_kws = {"fontsize":14}
+  )
+
+  
+  ax.tick_params(
+    axis="both",
+    labelsize=14
   )
 
   fig.tight_layout()
