@@ -56,7 +56,8 @@ def heatmap_raw(data):
     fmt='g',
     ax = ax,
     cmap="Blues",
-    annot_kws = {"fontsize":14}
+    annot_kws = {"fontsize":14},
+    cbar_kws={"label": "Runner Count"}
   )
 
   ax.tick_params(
@@ -89,7 +90,8 @@ def heatmap_pct(data):
       fmt=".1%",
       ax = ax,
       cmap = "Blues",
-      annot_kws = {"fontsize":14}
+      annot_kws = {"fontsize":14},
+      cbar_kws={"label": "Percent of Runners"}
   )
 
   
