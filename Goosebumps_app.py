@@ -41,16 +41,31 @@ heatmap_data_percents = heatmap_data.apply(
     axis=1
 )
 
-def heatmap_raw(data = heatmap_data, 
+def heatmap_raw(data = heatmap_data):
+  fig, ax = plt.subplots(figsize = (8,4))
+    
   sns.heatmap(
     heatmap_data,
     annot=True, 
-    fmt='g'
+    fmt='g',
+    ax = ax
   )
 
-sns.heatmap(
-    heatmap_data_percents,
-    annot=True,
-    fmt=".1%",
-    annot_kws = {"fontsize":6}
-)
+  fig.tight_layout()
+
+  return fig
+
+def heatmap_pct(data = heatmap_data_percents):
+  fig, ax = plt.subplots(figsize = (8,4))
+  
+  sns.heatmap(
+      heatmap_data_percents,
+      annot=True,
+      fmt=".1%",
+      ax = ax
+      annot_kws = {"fontsize":6}
+  )
+
+  return fig
+
+
