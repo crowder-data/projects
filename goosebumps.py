@@ -58,14 +58,15 @@ def heatmap_raw(data):
   )
 
   ax.tick_params(
-    axis="both",
-    labelsize=14
+      axis="x",
+      labelsize=14,
+      rotation=45
   )
-
-  ax.set_yticklabels(
-    ax.get_yticklabels(),
-    rotation=0,
-    fontsize=12
+  
+  ax.tick_params(
+      axis="y",
+      labelsize=14,
+      rotation=0
   )
 
   ax.set_xlabel("Year", fontsize=16)
@@ -88,14 +89,15 @@ def heatmap_pct(data):
 
   
   ax.tick_params(
-    axis="both",
-    labelsize=14
+      axis="x",
+      labelsize=14,
+      rotation=45
   )
-
-  ax.set_yticklabels(
-    ax.get_yticklabels(),
-    rotation=0,
-    fontsize=12
+  
+  ax.tick_params(
+      axis="y",
+      labelsize=14,
+      rotation=0
   )
   
   ax.set_xlabel("Year", fontsize=16)
