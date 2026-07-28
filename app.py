@@ -10,7 +10,7 @@ from goosebumps import (
 )
 
 
-df_long = load_data("Goosebumps.csv")
+df_long = load_data()
 
 heatmap_data = create_heatmap_data(df_long)
 heatmap_data_pct = create_percent_heatmap_data(heatmap_data)
