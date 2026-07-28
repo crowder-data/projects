@@ -62,6 +62,15 @@ def heatmap_raw(data):
     labelsize=14
   )
 
+  ax.set_yticklabels(
+    ax.get_yticklabels(),
+    rotation=0,
+    fontsize=12
+  )
+
+  ax.set_xlabel("Year", fontsize=16)
+  ax.set_ylabel("Mileage Range", fontsize=16)
+
   fig.tight_layout()
 
   return fig
@@ -82,6 +91,15 @@ def heatmap_pct(data):
     axis="both",
     labelsize=14
   )
+
+  ax.set_yticklabels(
+    ax.get_yticklabels(),
+    rotation=0,
+    fontsize=12
+  )
+  
+  ax.set_xlabel("Year", fontsize=16)
+  ax.set_ylabel("Mileage Range", fontsize=16)
 
   fig.tight_layout()
   
