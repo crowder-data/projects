@@ -10,7 +10,7 @@ df_wide = pd.read_csv('/data/Goosebumps.csv').drop(columns = 'Total')
 df_long = df_wide.melt(id_vars=['First','Last'], var_name='Year',value_name='Miles')
 df_long['Range'] = pd.cut(df_long['Miles'],bins=bins,labels=labels)
 
-def yearly_histogram(df = df_long, year, bins):
+def yearly_histogram(df, year, bins):
   data = df.loc[df['Year']==year, "Miles"]
 
   fig, ax = plt.subplots(figsize = (8,4))
@@ -23,7 +23,7 @@ def yearly_histogram(df = df_long, year, bins):
 
   ax.set_title(f'Runner Mileage Distribution - {year}')
   ax.set_xlabel('Total Miles')
-  ax.set_yabel('Runner Count')
+  ax.set_ylabel('Runner Count')
 
   fig.tight_layout()
 
@@ -45,7 +45,7 @@ def heatmap_raw(data = heatmap_data):
   fig, ax = plt.subplots(figsize = (8,4))
     
   sns.heatmap(
-    heatmap_data,
+    data,
     annot=True, 
     fmt='g',
     ax = ax
@@ -59,13 +59,15 @@ def heatmap_pct(data = heatmap_data_percents):
   fig, ax = plt.subplots(figsize = (8,4))
   
   sns.heatmap(
-      heatmap_data_percents,
+      data,
       annot=True,
       fmt=".1%",
-      ax = ax
+      ax = ax,
       annot_kws = {"fontsize":6}
   )
 
+  fig.tight_layout()
+  
   return fig
 
 
