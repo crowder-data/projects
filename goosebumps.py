@@ -41,6 +41,11 @@ def create_heatmap_data(df_long):
   return heatmap_data
 
 def create_heatmap_data_percents(df_long):
+  heatmap_data = (
+    df_long.groupby(['Year','Range'],observed=False)
+    .size()
+    .unstack(fill_value=0)
+  )
   heatmap_data_percents = heatmap_data.apply(
       lambda row: row / row.sum(),
       axis=1
